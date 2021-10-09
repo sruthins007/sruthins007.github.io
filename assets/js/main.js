@@ -127,7 +127,7 @@
 
 		// Toggle.
 			$navPanelToggle = $(
-				'<a href="#navPanel" id="navPanelToggle">Assistant</a>'
+				'<a href="#navPanel" id="navPanelToggle">Assist</a>'
 			)
 				.appendTo($wrapper);
 
