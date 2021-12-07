@@ -629,13 +629,16 @@
 	<script src="js/main.js"></script>
 
 	<script>
-	var d = new Date(new Date().getTime() + 71 * 120 * 120 * 2000 - 2000000);
+	// var d = new Date(new Date().getTime() + 71 * 120 * 120 * 2000 - 2000000);
+	// console.log(d.getFullYear())
+	// console.log(d.getMonth())
+	// console.log(d.getDate())
 
     // default example
     simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
+        year: 2021,
+        month: 12,
+        day: 30
     });
 
 </script>
