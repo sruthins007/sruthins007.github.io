@@ -34,9 +34,43 @@
     </head>
    
 <body>
+
+    <div
+                  className="AnagramSoundsPopup"
+                  data-toggle="modal"
+                  id="modalPopup"
+                  data-target="#anagramModal" 
+                  style="display: none"
+                >
+                  Sounds fun! How does it work?
+                </div>
+     <div
+          class="modal fade"
+          id="anagramModal"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-lg DesktopAnagramModal"
+            role="document"
+          >
+            <div class="modal-content">
+            <h1 style="margin: 16px 0px;color:white">Sruthin &amp; Aiswarya</h1>
+            <h2 style="margin: 16px 0px;color:white">We Are Getting Married</h2>
+            <div class="simply-countdown simply-countdown-one"></div>
+            <p style=" margin-bottom: 16px;"><a href="#" class="btn btn-default btn-sm" style="color: white; background-color:red; padding:10px;margin-right: 0;" data-dismiss="modal">Tap to save the date</a></button>
+  
+ 
+            </div>
+          </div>
+        </div>
+
+
+
 <audio id="audio" src="./Naan.mp3"></audio>
- <input type="button" value="PLAY" id="audioBtn" onclick="play()" style="display:none" 
-<button class="md-trigger" id="modal" data-modal="modal"></button>
+ <input type="button" value="PLAY" id="audioBtn" onclick="play()" style="display:none" />
+<!-- <button class="md-trigger" id="modal" data-modal="modal"></button> -->
     <!-- **** Loading **** -->
     <div class="globload">
         <div id="logo-loading" class="spinner animated fadeIn">
@@ -214,10 +248,12 @@
 </g>
 </svg> -->
 <!-- <div class="display-tc animate-box" data-animate-effect="fadeIn"> -->
-							<h1>Sruthin &amp; Aiswarya</h1>
-							<h2>We Are Getting Married</h2>
-							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+							<div id ="mainPageDiv">
+                                <h1 style="margin: 16px 0px;">Sruthin &amp; Aiswarya</h1>
+                                <h2>We Are Getting Married</h2>
+                                <div class="simply-countdown simply-countdown-one"></div>
+                                <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+                            </div>
 						<!-- </div> -->
                     
                     
@@ -837,10 +873,19 @@ getting married in Kerala, IN.</h3>
     });
 
     window.onload = function() {
+                    document.getElementById('modalPopup').click();
+
         setInterval (() => {
-        play();
-            
-        }, "1000")
+            play(); 
+        }, "1000");
+        setInterval (() => {
+                if(document.getElementById('anagramModal').classList[2] === 'in'){
+                    document.getElementById('mainPageDiv').style.display = "none";
+                } else {
+                    document.getElementById('mainPageDiv').style.display = "block";
+                }
+
+        }, "100")
     };
 
     function play() {
@@ -855,10 +900,10 @@ getting married in Kerala, IN.</h3>
 
 </script>
 <script>
-jQuery(function(){
-    console.log('here')
-   jQuery('#modal').click();
-});
+// jQuery(function(){
+//     console.log('here')
+//    jQuery('#modal').click();
+// });
 </script>
 
     </body>

@@ -1755,4 +1755,24 @@ a#go-top {
 		
 	}
 
+.DesktopAnagramModal{
+	position: relative;
+    top: 10%;
+    transform: translateY(-50%);
+}
 
+.modal-content{
+	background-image: url(../img/modalBg.jpeg);
+	    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 560px) {
+
+		.modal-content{
+			background-image: url(../img/modalBgMobile.jpeg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	
+	}
