@@ -525,6 +525,10 @@ footer {
   gap: 20px;
 }
 
+.service-details-item img{
+  width: 50px;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -800,4 +804,74 @@ iframe {
   top: 50% !important;
   transform: translateY(-50%) !important;
   text-align: center !important;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+/* 
+.slide {
+  display: none;
+} */
+
+.slide img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   padding: 20px;
+  text-align: center;
+  color: white;
+  width: 80%;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7); /* Light transparent color */
+  border: none;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .slide img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -170px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7); /* Light transparent color */
+    border: none;
+    color: black;
+  }
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
