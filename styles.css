@@ -637,7 +637,17 @@ iframe {
 
 
 
+@media (max-width: 768px) {
+  .clientarea {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
+  .clientbox {
+    width: 50.66%;  
+  }
+}
 
 
 
