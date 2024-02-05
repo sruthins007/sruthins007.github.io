@@ -521,12 +521,17 @@ footer {
 .service-details-item {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 20px;
 }
 
 .service-details-item img{
   width: 50px;
+}
+
+.service-details-item-title{
+  font-weight: 600;
+  color: rgba(11, 158, 153, 0.9);
 }
 
 .modal {
@@ -834,6 +839,10 @@ iframe {
   width: 80%;
 }
 
+.overlay p{
+  display: block;
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -865,6 +874,10 @@ iframe {
     background-color: rgba(255, 255, 255, 0.7); /* Light transparent color */
     border: none;
     color: black;
+  }
+
+  .overlay p{
+    display: none;
   }
 }
 
