@@ -163,6 +163,11 @@
     </div>
 
     <script>
+        function toggleMenu() {
+            var menu = document.querySelector(".menu");
+            menu.classList.toggle("active");
+        }
+        
         const modal = document.getElementById("modal");
         const openModalButton = document.getElementById("openModalButton");
         const closeModalButton = document.getElementById("closeModalButton");
